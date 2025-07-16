@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MathToWord Pitch Deck</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <style>
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: #ffffff;
+        margin: 0 auto;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #212121;
+        padding: 40px;
+        page-break-after: always;
+      }
+      .title {
+        font-size: 36px;
+        font-weight: bold;
+        color: #1e88e5;
+      }
+      .content {
+        font-size: 24px;
+      }
+      .highlight {
+        color: #ffc107;
+        font-weight: bold;
+      }
+      .price-card {
+        border: 2px solid #1e88e5;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+      }
+      .price-card:hover {
+        transform: scale(1.03);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      }
+      .price-header {
+        background-color: #1e88e5;
+        color: white;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8-px;
+        padding: 12px;
+      }
+      .best-value {
+        background-color: #ffc107;
+      }
+      .innovation-card {
+        border-left: 4px solid #1e88e5;
+        background-color: rgba(30, 136, 229, 0.05);
+      }
+      .barrier-card {
+        border-left: 4px solid #ffc107;
+        background-color: rgba(255, 193, 7, 0.05);
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .comparison-table th {
+        background-color: #1e88e5;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+      }
+      .comparison-table td {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #e0e0e0;
+      }
+      .comparison-table tr:nth-child(even) {
+        background-color: #f5f5f5;
+      }
+      .check-icon {
+        color: #4caf50;
+        font-size: 24px;
+      }
+      .times-icon {
+        color: #f44336;
+        font-size: 24px;
+      }
+      .skill-bar {
+        height: 25px;
+        background-color: #e0e0e0;
+        border-radius: 12px;
+        margin-bottom: 15px;
+      }
+      .skill-level {
+        height: 100%;
+        background-color: #1e88e5;
+        border-radius: 12px;
+      }
+      .metric-card {
+        background-color: #f5f5f5;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+      }
+      .metric-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      }
+      .metric-value {
+        font-size: 48px;
+        font-weight: bold;
+        color: #1e88e5;
+      }
+      .metric-label {
+        font-size: 18px;
+        color: #616161;
+      }
+      .projection-item {
+        border-left: 4px solid #1e88e5;
+        background-color: rgba(30, 136, 229, 0.05);
+      }
+      .ask-card {
+        border-left: 4px solid #1e88e5;
+        background-color: rgba(30, 136, 229, 0.05);
+      }
+      .valuation-card {
+        border-left: 4px solid #ffc107;
+        background-color: rgba(255, 193, 7, 0.05);
+      }
+      .contact-info {
+        background-color: #f5f5f5;
+        border-radius: 8px;
+      }
+      .description {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.2rem;
+    }
+    strong {
+      font-weight: 600;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container flex flex-col items-center justify-center p-10">
+      <div class="text-center mb-8">
+        <h1 class="title mb-4">MathToWord</h1>
+        <p class="subtitle mb-10">
+          <div class="description">
+    <strong>MathToWord</strong> is an AI-powered tool that converts handwritten notes,
+    PDFs, and images into editable Word (.DOCX) files — supporting all
+    subjects, 22+ languages, and multiple file formats with 95%+ accuracy.
+  </div>
+        </p>
+      </div>
+
+      <div class="flex justify-center mb-10">
+        <img
+          src="https://private-us-east-1.manuscdn.com/sessionFile/AQn5SRP4Bl35D0PvNt0NvU/sandbox/slides_resource_iqnkgovl4ulro73c6fa8v-9c2dff8a-e2b-prod-aws_1752678023126_na1fn_L2hvbWUvdWJ1bnR1L3VwbG9hZC9zZWFyY2hfaW1hZ2VzL2hZcUNUNndNVXBEVw.jpeg?x-oss-process=image/resize,w_1560,h_1560/format,webp&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvQVFuNVNSUDRCbDM1RDBQdk50ME52VS9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9pcW5rZ292bDR1bHJvNzNjNmZhOHYtOWMyZGZmOGEtZTJiLXByb2QtYXdzXzE3NTI2NzgwMjMxMjZfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzVndiRzloWkM5elpXRnlZMmhmYVcxaFoyVnpMMmhaY1VOVU5uZE5WWEJFVncuanBlZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE1NjAsaF8xNTYwL2Zvcm1hdCx3ZWJwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=katWmOwIfvLZYvaBZ02L-3yIK-Qq3CQCMyrb~0FBBFb-Pv5ceoKAnXm8vzMyh~e~-lK3kQSuRc4L8WFPTDDnRfljf45~zTdEUR8BQTkuIKJ6D07XP5M~O8O-ynOKph1QEt8eJct6~-S0oVaFL~1oPSFlgKfEzmRnrhfMjhIaK8FHeqvLiYIRlb7vSRR73koZDTyhWkUBsfmtEjAKHdQ7xW7yLg5eJbSmO52LEauU9paomNnwe8XW9b~XsJgAsfgMQhsKl5P0925L3x-UhyTE~jiFEX-g0FGbBKVtn15ETH0ItV4MfeGQs1DQWs3M0VQB-xCGCr~3HAFiyp~v0CAgVw__"
+          alt="Handwritten Math Conversion"
+          class="rounded-lg shadow-lg"
+          style="height: 250px; width: auto"
+        />
+      </div>
+
+      <div class="contact text-center mt-8">
+        <p class="mb-2">Created by Rahul Kumar</p>
+        <p class="mb-2">www.mathtoword.com</p>
+        <p>therahulkumar.dev@gmail.com | +91 9523947981</p>
+      </div>
+    </div>
+
+    <div class="slide-container">
+      <h1 class="title mb-8 text-center">The Problem & The Opportunity</h1>
+
+      <div class="flex">
+        <div class="w-1/2 pr-8">
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-red-600">The Problem</h2>
+            <ul class="content space-y-4">
+              <li>
+                <i class="fas fa-times-circle text-red-500 mr-2"></i> Typing
+                mathematical and multilingual handwritten content is tedious and
+                time-consuming
+              </li>
+              <li>
+                <i class="fas fa-times-circle text-red-500 mr-2"></i> Students,
+                teachers, typists, and publishers face difficulty in digitizing
+                math-heavy study materials
+              </li>
+              <li>
+                <i class="fas fa-times-circle text-red-500 mr-2"></i> Manual
+                conversion is error-prone and requires specialized knowledge
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8">
+            <img
+              src="https://private-us-east-1.manuscdn.com/sessionFile/AQn5SRP4Bl35D0PvNt0NvU/sandbox/slides_resource_iqnkgovl4ulro73c6fa8v-9c2dff8a-e2b-prod-aws_1752678041721_na1fn_L2hvbWUvdWJ1bnR1L3VwbG9hZC9zZWFyY2hfaW1hZ2VzL3h6SUZoNmRkR2lSUg.jpg?x-oss-process=image/resize,w_1560,h_1560/format,webp&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvQVFuNVNSUDRCbDM1RDBQdk50ME52VS9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9pcW5rZ292bDR1bHJvNzNjNmZhOHYtOWMyZGZmOGEtZTJiLXByb2QtYXdzXzE3NTI2NzgwNDE3MjFfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzVndiRzloWkM5elpXRnlZMmhmYVcxaFoyVnpMM2g2U1Vab05tUmtSMmxTVWcuanBnP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTU2MCxoXzE1NjAvZm9ybWF0LHdlYnAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=g1pXJcRdQ7rAKnpfxoeVJzZIvd2ReQO3h4xh8mmrIQv2dH89~gv2Pns4BkJ-zw5kyztar1kZeeWnFc-o7gwW40VkwNKLxhU-mKkm-ziLruNOsPyFwjB9xVekGiGYSmkzpprjpY6swTD1LM02-XobyhsBR354f5IWsACYJzdw4ZvB-Ex5kxSTr10m-agmZadsWXAuSVjbIiUeqrjwNmsdwPZSxhIQPv5v4fnRIjny42NfT7d4LCvYziDCzLkfbjiiDDoqhu13l7-d3j1NGMRg3BJT9jQfUzGU~GADdlkPgkv8BK3e0yimuaqz0RT8KD1Cxidd3sPvuPyxA-7m~-3P4g__"
+              alt="Handwritten Math Challenges"
+              style="height: 250px; width: auto"
+              class="rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
+
+        <div class="w-1/2 pl-8">
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-green-600">
+              The Opportunity
+            </h2>
+            <ul class="content space-y-4">
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-2"></i> A
+                scalable, <span class="highlight">AI-powered solution</span> to
+                automate this tedious task
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-2"></i> Save
+                hours of effort daily for educational professionals
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-2"></i> Bridge
+                the gap between handwritten content and digital documents
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8">
+            <img
+              src="https://private-us-east-1.manuscdn.com/sessionFile/AQn5SRP4Bl35D0PvNt0NvU/sandbox/slides_resource_iqnkgovl4ulro73c6fa8v-9c2dff8a-e2b-prod-aws_1752678041721_na1fn_L2hvbWUvdWJ1bnR1L3VwbG9hZC9zZWFyY2hfaW1hZ2VzL0s1UURFWDN4OXJjcA.jpg?x-oss-process=image/resize,w_1560,h_1560/format,webp&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvQVFuNVNSUDRCbDM1RDBQdk50ME52VS9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9pcW5rZ292bDR1bHJvNzNjNmZhOHYtOWMyZGZmOGEtZTJiLXByb2QtYXdzXzE3NTI2NzgwNDE3MjFfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzVndiRzloWkM5elpXRnlZMmhmYVcxaFoyVnpMMHMxVVVSRldETjRPWEpqY0EuanBnP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTU2MCxoXzE1NjAvZm9ybWF0LHdlYnAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=onN4wLl6W2PEMhFugwNHWF6caf~kDuMuSe6yBpgqRPRphciGjVGmBVoHAo4XyvE4ALIu7V68oBp3XVloDknyMZi0bfpNLVlvZ-li3RETgLuvSE9TvBIa-Ac1OOiE8chPYJkmfDPmv1LxqeJqx~oKjcjr6ZYVpSOd1t55kI~o31E4wIHycF3OEBw4E4ZTwLGpat~fJ4OWYdKrB0z9xYKSyJPBEqkui4M6~8~EuKzfZI5Np0YkwYRuwTCOIQmr2cgeNZyLLCkunV0PoRjWlxP3nro~wfCscV3sChCgivADpkdzVi1~NYuc~lmBGCr4FfNvXrzMIrE3ml0wkeZvBE3SeQ__"
+              alt="AI in Education Opportunity"
+              style="height: 250px; width: auto"
+              class="rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-container">
+      <h1 class="title mb-8 text-center">Market Size</h1>
+
+      <div class="flex">
+        <div class="w-1/2 pr-8">
+          <h2 class="text-2xl font-bold mb-6 text-gray-800">
+            India's Education Market
+          </h2>
+
+          <ul class="content space-y-4 mb-6">
+            <li>
+              <i class="fas fa-graduation-cap text-blue-500 mr-2"></i>
+              <span class="highlight">300M+</span> students and educators
+            </li>
+            <li>
+              <i class="fas fa-school text-blue-500 mr-2"></i> 10,000+ coaching
+              centers, schools, and universities
+            </li>
+            <li>
+              <i class="fas fa-building text-blue-500 mr-2"></i> Growing demand
+              in Kacheri offices, printing presses, typist community, and publication houses
+            </li>
+          </ul>
+
+          <div style="height: 300px">
+            <canvas id="indiaChart"></canvas>
+          </div>
+        </div>
+
+        <div class="w-1/2 pl-8">
+          <h2 class="text-2xl font-bold mb-6 text-gray-800">
+            Global EdTech Market
+          </h2>
+
+          <p class="content mb-6">
+            Expected to reach <span class="highlight">$340B by 2030</span>
+          </p>
+
+          <div style="height: 350px">
+            <canvas id="globalChart"></canvas>
+          </div>
+
+          <p class="text-sm text-gray-600 mt-4">
+            Source: Market research reports from Grand View Research, Holon IQ,
+            and Fortune Business Insights
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // India Education Chart
+      const indiaCtx = document.getElementById("indiaChart").getContext("2d")
+      const indiaChart = new Chart(indiaCtx, {
+        type: "bar",
+        data: {
+          labels: ["Students", "Teachers", "Schools"],
+          datasets: [
+            {
+              label: "India Education System (in millions)",
+              data: [250, 9.8, 1.5],
+              backgroundColor: ["#1E88E5", "#42A5F5", "#90CAF9"],
+              borderColor: ["#1565C0", "#1565C0", "#1565C0"],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false,
+            },
+            title: {
+              display: true,
+              text: "India Education System Scale",
+            },
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: "Millions",
+              },
+            },
+          },
+        },
+      })
+
+      // Global EdTech Market Chart
+      const globalCtx = document.getElementById("globalChart").getContext("2d")
+      const globalChart = new Chart(globalCtx, {
+        type: "line",
+        data: {
+          labels: [
+            "2023",
+            "2024",
+            "2025",
+            "2026",
+            "2027",
+            "2028",
+            "2029",
+            "2030",
+          ],
+          datasets: [
+            {
+              label: "Global EdTech Market Size (in Billion USD)",
+              data: [150, 170, 195, 225, 255, 285, 315, 340],
+              fill: true,
+              backgroundColor: "rgba(255, 193, 7, 0.2)",
+              borderColor: "#FFC107",
+              tension: 0.3,
+              pointBackgroundColor: "#1E88E5",
+              pointBorderColor: "#FFFFFF",
+              pointRadius: 5,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: true,
+            },
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: "Billion USD",
+              },
+            },
+          },
+        },
+      })
+    </script>
+
+    <div class="slide-container">
+      <h1 class="title mb-8 text-center">The Solution & Scalability</h1>
+
+      <div class="flex mb-8">
+        <div class="w-1/2 pr-8">
+          <h2 class="text-2xl font-bold mb-6 text-gray-800">MathToWord</h2>
+          <p class="content mb-6">
+            An AI-based SaaS platform that converts handwritten math, PDFs, and
+            images into DOCX files with high accuracy.
+          </p>
+
+          <img
+            src="https://private-us-east-1.manuscdn.com/sessionFile/AQn5SRP4Bl35D0PvNt0NvU/sandbox/slides_resource_iqnkgovl4ulro73c6fa8v-9c2dff8a-e2b-prod-aws_1752678092582_na1fn_L2hvbWUvdWJ1bnR1L3VwbG9hZC9zZWFyY2hfaW1hZ2VzL1dHbnNORWF3V3hlTA.webp?x-oss-process=image/resize,w_1560,h_1560/format,webp&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvQVFuNVNSUDRCbDM1RDBQdk50ME52VS9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9pcW5rZ292bDR1bHJvNzNjNmZhOHYtOWMyZGZmOGEtZTJiLXByb2QtYXdzXzE3NTI2NzgwOTI1ODJfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzVndiRzloWkM5elpXRnlZMmhmYVcxaFoyVnpMMWRIYm5OT1JXRjNWM2hsVEEud2VicD94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE1NjAsaF8xNTYwL2Zvcm1hdCx3ZWJwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=pEu2oY1oGRvp~bA3tp3cT-LO-fGlhf1efPc3TRYmm0GQyb94OQWNKNVidvx2biqqMGoFcaIkgOB2QF~G8Re-yUg5N2gg8zLiGEd5nfjsqp8GHnj4VT6vptoQ3pxYiB20K8Xr18jGCbqftLzygVYV9DmZDtMgRrXtumA8K7mexbDmFhEclP9iLS1v8228ugcFWMlTWhHQDX~nZhAWauHnpHVSYLCj4v2fAZBbgKJsDL7k7YBgycKsebj6XsCGoNu4vufM9-aMmBomVHnzdpwn9ZeEACVsPqGS3ruVfeGAWoxb1yHB0ie7-nnNOdNXAI1CxlFBJYNxVmfTpg7-tmO3tQ__"
+            alt="MathToWord Solution"
+            style="height: 280px; width: auto"
+            class="rounded-lg shadow-lg"
+          />
+        </div>
+
+        <div class="w-1/2 pl-8">
+          <h2 class="text-2xl font-bold mb-6 text-gray-800">Key Features</h2>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div class="feature-card bg-blue-50 p-4 rounded-lg shadow-md">
+              <div class="flex items-center mb-2">
+                <i class="fas fa-file-pdf text-blue-500 text-2xl mr-3"></i>
+                <h3 class="font-bold">Multiple Formats</h3>
+              </div>
+              <p>Supports 20+ formats including PDFs, JPG, PNG, and handwritten notes.</p>
+            </div>
+
+            <div class="feature-card bg-blue-50 p-4 rounded-lg shadow-md">
+              <div class="flex items-center mb-2">
+                <i class="fas fa-check-circle text-green-500 text-2xl mr-3"></i>
+                <h3 class="font-bold">High Accuracy</h3>
+              </div>
+              <p><span class="highlight">95%+</span> recognition accuracy and batch processing</p>
+            </div>
+
+            <div class="feature-card bg-blue-50 p-4 rounded-lg shadow-md">
+              <div class="flex items-center mb-2">
+                <i class="fas fa-language text-purple-500 text-2xl mr-3"></i>
+                <h3 class="font-bold">Multilingual</h3>
+              </div>
+              <p>22+ languages including Hindi and English.</p>
+            </div>
+
+            <div class="feature-card bg-blue-50 p-4 rounded-lg shadow-md">
+              <div class="flex items-center mb-2">
+                <i class="fas fa-cloud text-blue-500 text-2xl mr-3"></i>
+                <h3 class="font-bold">Scalable</h3>
+              </div>
+              <p>Cloud-based architecture</p>
+            </div>
+          </div>
+
+          <div style="height: 180px; margin-top: 20px">
+            <canvas id="accuracyChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Accuracy Comparison Chart
+      const accuracyCtx = document
+        .getElementById("accuracyChart")
+        .getContext("2d")
+      const accuracyChart = new Chart(accuracyCtx, {
+        type: "bar",
+        data: {
+          labels: ["MathToWord", "Traditional OCR", "Manual Typing"],
+          datasets: [
+            {
+              label: "Accuracy Rate (%)",
+              data: [95, 75, 85],
+              backgroundColor: ["#1E88E5", "#90CAF9", "#BBDEFB"],
+              borderColor: ["#1565C0", "#1565C0", "#1565C0"],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false,
+            },
+            title: {
+              display: true,
+              text: "Accuracy Comparison",
+            },
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              max: 100,
+              title: {
+                display: true,
+                text: "Accuracy (%)",
+              },
+            },
+          },
+        },
+      })
+    </script>
+
+    <div class="slide-container">
+      <h1 class="title mb-8 text-center">Earnings Model</h1>
+
+      <div class="flex mb-8">
+        <div class="w-1/2 pr-8">
+          <h2 class="text-2xl font-bold mb-6 text-gray-800">
+            Freemium Model + Paid Subscriptions
+          </h2>
+
+          <ul class="content space-y-4 mb-6">
+            <li>
+              <i class="fas fa-check text-green-500 mr-2"></i> Free tier with
+              limited conversions
+            </li>
+            <li>
+              <i class="fas fa-check text-green-500 mr-2"></i> Subscription
+              tiers based on conversion volume
+            </li>
+            <li>
+              <i class="fas fa-check text-green-500 mr-2"></i> Enterprise
+              pricing for high-volume users
+            </li>
+            <li>
+              <i class="fas fa-check text-green-500 mr-2"></i> Custom plans
+              available on request
+            </li>
+          </ul>
+
+          <div style="height: 300px">
+            <canvas id="revenueChart"></canvas>
+          </div>
+        </div>
+
+        <div class="w-1/2 pl-8">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="price-card">
+              <div class="price-header text-center">
+                <h3 class="text-xl font-bold">Monthly</h3>
+              </div>
+              <div class="p-4 text-center">
+                <p class="text-3xl font-bold mb-2">₹499</p>
+                <p class="text-gray-600">500 conversions</p>
+              </div>
+            </div>
+
+            <div class="price-card">
+              <div class="price-header text-center">
+                <h3 class="text-xl font-bold">3 Months</h3>
+              </div>
+              <div class="p-4 text-center">
+                <p class="text-3xl font-bold mb-2">₹1349</p>
+                <p class="text-gray-600">1500+ conversions</p>
+              </div>
+            </div>
+
+            <div class="price-card">
+              <div class="price-header text-center">
+                <h3 class="text-xl font-bold">6 Months</h3>
+              </div>
+              <div class="p-4 text-center">
+                <p class="text-3xl font-bold mb-2">₹2599</p>
+                <p class="text-gray-600">3000+ conversions</p>
+              </div>
+            </div>
+
+            <div class="price-card">
+              <div class="price-header best-value text-center">
+                <h3 class="text-xl font-bold">Yearly</h3>
+              </div>
+              <div class="p-4 text-center">
+                <p class="text-3xl font-bold mb-2">₹4799</p>
+                <p class="text-gray-600">6000+ conversions</p>
+                <p class="text-sm font-bold text-green-600 mt-2">Best Value</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 p-4 bg-gray-50 rounded-lg">
+            <p class="text-lg font-semibold">
+              <i class="fas fa-building text-blue-500 mr-2"></i> Enterprise
+              pricing and custom plans available on request
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Revenue Projection Chart
+      const revenueCtx = document
+        .getElementById("revenueChart")
+        .getContext("2d")
+      const revenueChart = new Chart(revenueCtx, {
+        type: "bar",
+        data: {
+          labels: [
+            "Free Users",
+            "Monthly",
+            "3 Months",
+            "6 Months",
+            "Yearly",
+            "Enterprise",
+          ],
+          datasets: [
+            {
+              label: "Revenue Contribution (%)",
+              data: [0, 15, 20, 25, 30, 10],
+              backgroundColor: [
+                "#E0E0E0",
+                "#90CAF9",
+                "#64B5F6",
+                "#42A5F5",
+                "#1E88E5",
+                "#FFC107",
+              ],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false,
+            },
+            title: {
+              display: true,
+              text: "Projected Revenue Distribution",
+            },
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: "Percentage (%)",
+              },
+            },
+          },
+        },
+      })
+    </script>
+
+    <div class="slide-container">
+      <h1 class="title mb-8 text-center">Innovation & Entry Barriers</h1>
+
+      <div class="flex">
+        <div class="w-1/2 pr-8">
+          <h2 class="text-2xl font-bold mb-6 text-gray-800">Innovation</h2>
+
+          <div class="space-y-4">
+            <div class="innovation-card p-4 rounded-r-lg">
+              <div class="flex items-center">
+                <i class="fas fa-robot text-2xl text-blue-500 mr-3"></i>
+                <p class="content">
+                  AI engine trained for
+                  <span class="highlight">handwritten math</span> recognition
+                </p>
+              </div>
+            </div>
+
+            <div class="innovation-card p-4 rounded-r-lg">
+              <div class="flex items-center">
+                <i class="fas fa-language text-2xl text-blue-500 mr-3"></i>
+                <p class="content">
+                  Multilingual processing
+                  <span class="highlight">(Hindi, English, symbols)</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="innovation-card p-4 rounded-r-lg">
+              <div class="flex items-center">
+                <i class="fas fa-layer-group text-2xl text-blue-500 mr-3"></i>
+                <p class="content">Batch uploads with smart queueing</p>
+              </div>
+            </div>
+
+            <div class="innovation-card p-4 rounded-r-lg">
+              <div class="flex items-center">
+                <i class="fas fa-shield-alt text-2xl text-blue-500 mr-3"></i>
+                <p class="content">
+                  Bank-level data security and no data retention
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <img
+              src="https://private-us-east-1.manuscdn.com/sessionFile/AQn5SRP4Bl35D0PvNt0NvU/sandbox/slides_resource_iqnkgovl4ulro73c6fa8v-9c2dff8a-e2b-prod-aws_1752678095127_na1fn_L2hvbWUvdWJ1bnR1L3VwbG9hZC9zZWFyY2hfaW1hZ2VzL2lSTlJMTTdjNHlzdA.jpg?x-oss-process=image/resize,w_1560,h_1560/format,webp&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvQVFuNVNSUDRCbDM1RDBQdk50ME52VS9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9pcW5rZ292bDR1bHJvNzNjNmZhOHYtOWMyZGZmOGEtZTJiLXByb2QtYXdzXzE3NTI2NzgwOTUxMjdfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzVndiRzloWkM5elpXRnlZMmhmYVcxaFoyVnpMMmxTVGxKTVRUZGpOSGx6ZEEuanBnP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTU2MCxoXzE1NjAvZm9ybWF0LHdlYnAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=G3yNkOrCquuqjCE1MfmhwAZdH05oA0M4uxTEaCR9BG9tHbsElBdsFCTVN0JGRDFBm0TfmgvLaIe0YwniO4Sq~w1HlTtcKuKOQJLEeVZyM4lIKyTT2m7IEEHDuY0RoKsTJUJSiWU9neUDyW1tFYlKm3X~XQOY6yyCbKvtGji3QsYT5epJXgMLtdQX~pVSjrws1jMv7I-P~BtLV6i0r2gkT7mKjSBFQ5pQnWb~7xTxMU9CrGSVt72dhTenKDzgsRocyiZd~enJO6saozPK848chj5jjvWTLFI~BJSe53tkV9RGz77CD3gEp6RVYlxO8RvrZbWxmLeIwmR9smeSVxyIgg__"
+              alt="Math Conversion Technology"
+              style="height: 220px; width: auto"
+              class="rounded-lg shadow-lg mx-auto"
+            />
+          </div>
+        </div>
+
+        <div class="w-1/2 pl-8">
+          <h2 class="text-2xl font-bold mb-6 text-gray-800">Entry Barriers</h2>
+
+          <div style="height: 350px">
+            <canvas id="barriersChart"></canvas>
+          </div>
+
+          <div class="space-y-4 mt-8">
+            <div class="barrier-card p-4 rounded-r-lg">
+              <div class="flex items-center">
+                <i class="fas fa-code-branch text-2xl text-amber-500 mr-3"></i>
+                <p class="content">
+                  <span class="highlight">High technical barrier</span> for new
+                  entrants
+                </p>
+              </div>
+            </div>
+
+            <div class="barrier-card p-4 rounded-r-lg">
+              <div class="flex items-center">
+                <i class="fas fa-database text-2xl text-amber-500 mr-3"></i>
+                <p class="content">
+                  Extensive
+                  <span class="highlight">training data requirements</span> for
+                  accuracy
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Entry Barriers Chart
+      const barriersCtx = document
+        .getElementById("barriersChart")
+        .getContext("2d")
+      const barriersChart = new Chart(barriersCtx, {
+        type: "radar",
+        data: {
+          labels: [
+            "AI Expertise",
+            "Math Recognition",
+            "Multilingual Support",
+            "Data Security",
+            "Indian Language Processing",
+          ],
+          datasets: [
+            {
+              label: "Entry Barrier Level",
+              data: [85, 90, 75, 80, 95],
+              fill: true,
+              backgroundColor: "rgba(255, 193, 7, 0.2)",
+              borderColor: "#FFC107",
+              pointBackgroundColor: "#1E88E5",
+              pointBorderColor: "#FFFFFF",
+              pointHoverBackgroundColor: "#FFFFFF",
+              pointHoverBorderColor: "#1E88E5",
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            r: {
+              angleLines: {
+                display: true,
+              },
+              suggestedMin: 0,
+              suggestedMax: 100,
+            },
+          },
+          plugins: {
+            legend: {
+              display: true,
+              position: "top",
+            },
+            title: {
+              display: true,
+              text: "Competitive Entry Barriers (0-100 scale)",
+            },
+          },
+        },
+      })
+    </script>
+
+    <div class="slide-container flex flex-col justify-between">
+      <h1 class="title mb-6 text-center">Competition</h1>
+
+      <div class="mb-6">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Tool</th>
+              <th>Handwriting Support</th>
+              <th>Math Support</th>
+              <th>Indian Languages</th>
+              <th>Batch Processing</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="font-bold">MathToWord</td>
+              <td><i class="fas fa-check check-icon"></i></td>
+              <td><i class="fas fa-check check-icon"></i></td>
+              <td><i class="fas fa-check check-icon"></i> (Hindi)</td>
+              <td><i class="fas fa-check check-icon"></i></td>
+            </tr>
+            <tr>
+              <td class="font-bold">Mathpix</td>
+              <td><i class="fas fa-check check-icon"></i></td>
+              <td><i class="fas fa-check check-icon"></i></td>
+              <td><i class="fas fa-times times-icon"></i></td>
+              <td><i class="fas fa-times times-icon"></i></td>
+            </tr>
+            <tr>
+              <td class="font-bold">Convertio</td>
+              <td><i class="fas fa-times times-icon"></i></td>
+              <td><i class="fas fa-times times-icon"></i></td>
+              <td><i class="fas fa-times times-icon"></i></td>
+              <td><i class="fas fa-check check-icon"></i></td>
+            </tr>
+            <tr>
+              <td class="font-bold">Microsoft OCR</td>
+              <td><i class="fas fa-check check-icon"></i></td>
+              <td><i class="fas fa-times times-icon"></i></td>
+              <td><i class="fas fa-check check-icon"></i></td>
+              <td><i class="fas fa-times times-icon"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="flex justify-evenly">
+        <div class="w-1/2 pr-6">
+          <h2 class="text-2xl font-bold mb-3 text-gray-800">
+            Competitive Analysis
+          </h2>
+          <ul class="content space-y-2">
+            <li>
+              <i class="fas fa-circle text-blue-500 mr-2"></i>
+              <span class="font-bold">Mathpix:</span> Strong in math recognition
+              but lacks Indian language support
+            </li>
+            <li>
+              <i class="fas fa-circle text-blue-500 mr-2"></i>
+              <span class="font-bold">Convertio:</span> General file converter
+              without specialized capabilities
+            </li>
+            <li>
+              <i class="fas fa-circle text-blue-500 mr-2"></i>
+              <span class="font-bold">Microsoft OCR:</span> Supports handwriting
+              and Hindi but not math content
+            </li>
+          </ul>
+        </div>
+
+        <div class="w-1/2 pl-6">
+          <div class="bg-gray-50 p-5 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-3 text-gray-800">
+              MathToWord's Edge
+            </h2>
+            <p class="content mb-3">
+              <span class="highlight"
+                >Specialized in mathematical + handwritten Indian content</span
+              >
+            </p>
+            <ul class="content space-y-2">
+              <li>
+                <i class="fas fa-star text-yellow-500 mr-2"></i> Only solution
+                with focus on Indian educational context
+              </li>
+              <li>
+                <i class="fas fa-star text-yellow-500 mr-2"></i> Optimized for
+                math-heavy content with multilingual support
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-container">
+      <h1 class="title mb-8 text-center">Founders & The Team</h1>
+
+      <div class="flex">
+        <div class="w-2/5 pr-8">
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md mb-6 text-center">
+            <h2 class="text-2xl font-bold mb-4">Rahul Kumar</h2>
+            <p class="text-lg text-gray-600 mb-4">Founder</p>
+
+            <div
+              class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center"
+            >
+              <!-- <i class="fas fa-user-tie text-6xl text-gray-400">
+
+              </i> -->
+              <img src="https://avatars.githubusercontent.com/u/175759363" alt="founder-photo">
+            </div>
+
+            <p class="mb-2">
+              <i class="fab fa-linkedin text-blue-600 mr-2"></i>
+              <a
+                href="https://www.linkedin.com/in/therahulkumar9"
+                class="text-blue-600 hover:underline"
+                >linkedin.com/in/therahulkumar9</a
+              >
+            </p>
+
+            <p class="mb-2">
+              <i class="fas fa-envelope text-gray-600 mr-2"></i>
+              therahulkumar.dev@gmail.com
+            </p>
+          </div>
+        </div>
+
+        <div class="w-3/5 pl-8">
+          <h2 class="text-2xl font-bold mb-6">Professional Background</h2>
+
+          <ul class="content space-y-4 mb-8">
+            <li>
+              <i class="fas fa-check-circle text-green-500 mr-2"></i>
+              <span class="highlight">2+ years</span> full-stack & AI product
+              development
+            </li>
+            <li>
+              <i class="fas fa-check-circle text-green-500 mr-2"></i> Founder of
+              multiple tools under MathToWord
+            </li>
+            <li>
+              <i class="fas fa-check-circle text-green-500 mr-2"></i> Passionate
+              about education, automation, and accessibility
+            </li>
+          </ul>
+
+          <h3 class="text-xl font-bold mb-4">Key Skills</h3>
+
+          <div class="mb-4">
+            <div class="flex justify-between mb-1">
+              <span>AI & Machine Learning</span>
+              <span>95%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 95%"></div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <div class="flex justify-between mb-1">
+              <span>Full-Stack Development</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 90%"></div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <div class="flex justify-between mb-1">
+              <span>Product Management</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 85%"></div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <div class="flex justify-between mb-1">
+              <span>Educational Technology</span>
+              <span>92%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 92%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-container">
+      <h1 class="title mb-8 text-center">Traction</h1>
+
+      <div class="flex mb-10">
+        <div class="w-1/2 pr-8">
+          <div class="grid grid-cols-2 gap-6">
+            <div class="metric-card p-6 text-center">
+              <p class="metric-value">1000+</p>
+              <p class="metric-label">Files Converted</p>
+            </div>
+
+            <div class="metric-card p-6 text-center">
+              <p class="metric-value">10+</p>
+              <p class="metric-label">Happy Users</p>
+            </div>
+
+            <div class="metric-card p-6 text-center">
+              <p class="metric-value">3+</p>
+              <p class="metric-label">Paid Plans Activated</p>
+            </div>
+
+            <div class="metric-card p-6 text-center">
+              <p class="metric-value">2,000+</p>
+              <p class="metric-label">Test Files Processed</p>
+            </div>
+          </div>
+
+          <div class="mt-8 p-6 bg-blue-50 rounded-lg">
+            <h3 class="text-xl font-bold mb-4">User Segments</h3>
+            <ul class="space-y-2">
+              <ul class="list-disc pl-5 space-y-2">
+  <li>
+    <i class="fas fa-university text-blue-500 mr-2"></i> Colleges
+  </li>
+  <li>
+    <i class="fas fa-chalkboard-teacher text-blue-500 mr-2"></i> Coaching Centers
+  </li>
+  <li>
+    <i class="fas fa-balance-scale text-blue-500 mr-2"></i> Kacheri Offices
+  </li>
+  <li>
+    <i class="fas fa-school text-blue-500 mr-2"></i> Schools
+  </li>
+  <li>
+    <i class="fas fa-print text-blue-500 mr-2"></i> Printing Presses
+  </li>
+  <li>
+    <i class="fas fa-book-open text-blue-500 mr-2"></i> Publication Houses
+  </li>
+  <li>
+    <i class="fas fa-user-edit text-blue-500 mr-2"></i> Typists & Content Professionals
+  </li>
+  <li>
+    <i class="fas fa-language text-blue-500 mr-2"></i> Multilingual Users (Hindi, English & 20+ Languages)
+  </li>
+</ul>
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="w-1/2 pl-8">
+          <h3 class="text-xl font-bold mb-6">Growth Metrics</h3>
+
+          <div style="height: 300px">
+            <canvas id="growthChart"></canvas>
+          </div>
+
+          <div class="mt-8">
+            <h3 class="text-xl font-bold mb-4">User Satisfaction</h3>
+            <div style="height: 200px">
+              <canvas id="satisfactionChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Growth Chart
+      const growthCtx = document.getElementById("growthChart").getContext("2d")
+      const growthChart = new Chart(growthCtx, {
+        type: "line",
+        data: {
+          labels: ["Mar", "Apr", "May", "Jun","Jul"],
+          datasets: [
+            {
+              label: "Files Converted",
+              data: [50, 100, 150, 200, 500],
+              borderColor: "#1E88E5",
+              backgroundColor: "rgba(30, 136, 229, 0.1)",
+              tension: 0.4,
+              fill: true,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: true,
+              position: "top",
+            },
+            title: {
+              display: true,
+              text: "Monthly Growth in File Conversions",
+            },
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: "Number of Files",
+              },
+            },
+          },
+        },
+      })
+
+      // Satisfaction Chart
+      const satisfactionCtx = document
+        .getElementById("satisfactionChart")
+        .getContext("2d")
+      const satisfactionChart = new Chart(satisfactionCtx, {
+        type: "doughnut",
+        data: {
+          labels: ["Very Satisfied", "Satisfied", "Neutral", "Unsatisfied"],
+          datasets: [
+            {
+              data: [65, 25, 8, 2],
+              backgroundColor: ["#4CAF50", "#1E88E5", "#FFC107", "#F44336"],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: "right",
+            },
+            title: {
+              display: true,
+              text: "User Satisfaction Ratings",
+            },
+          },
+        },
+      })
+    </script>
+
+    <div class="slide-container">
+      <h1 class="title mb-8 text-center">Projections</h1>
+
+      <div class="flex">
+        <div class="w-1/2 pr-8">
+          <h2 class="text-2xl font-bold mb-6 text-gray-800">Next 12 Months</h2>
+
+          <div class="space-y-4 mb-8">
+            <div class="projection-item p-4 rounded-r-lg">
+              <div class="flex items-center">
+                <i class="fas fa-file-alt text-2xl text-blue-500 mr-3"></i>
+                <p class="content">
+                  <span class="highlight">50,000</span> files/month
+                </p>
+              </div>
+            </div>
+
+            <div class="projection-item p-4 rounded-r-lg">
+              <div class="flex items-center">
+                <i class="fas fa-users text-2xl text-blue-500 mr-3"></i>
+                <p class="content">
+                  <span class="highlight">2,000+</span> paid subscribers
+                </p>
+              </div>
+            </div>
+
+            <div class="projection-item p-4 rounded-r-lg">
+              <div class="flex items-center">
+                <i class="fas fa-rupee-sign text-2xl text-blue-500 mr-3"></i>
+                <p class="content">
+                  <span class="highlight">₹10L ARR</span> from subscriptions
+                </p>
+              </div>
+            </div>
+
+            <div class="projection-item p-4 rounded-r-lg">
+              <div class="flex items-center">
+                <i class="fas fa-mobile-alt text-2xl text-blue-500 mr-3"></i>
+                <p class="content">
+                  Expand into mobile app, PDF, PPTX and other feature support
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div style="height: 300px">
+            <canvas id="userGrowthChart"></canvas>
+          </div>
+        </div>
+
+        <div class="w-1/2 pl-8">
+          <h2 class="text-2xl font-bold mb-6 text-gray-800">
+            Revenue Projection
+          </h2>
+
+          <div style="height: 350px">
+            <canvas id="revenueProjectionChart"></canvas>
+          </div>
+
+          <div class="mt-8 p-6 bg-gray-50 rounded-lg shadow-md">
+            <h3 class="text-xl font-bold mb-4">Future Expansion Plans</h3>
+            <ul class="space-y-2">
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-2"></i> Launch
+                mobile applications (Android & iOS)
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-2"></i> Add
+                DOCX-to-LaTeX conversion feature
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-2"></i> Expand
+                language support
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-2"></i> Develop
+                API for third-party integrations
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // User Growth Chart
+      const userCtx = document
+        .getElementById("userGrowthChart")
+        .getContext("2d")
+      const userGrowthChart = new Chart(userCtx, {
+        type: "line",
+        data: {
+          labels: ["Month 1", "Month 3", "Month 6", "Month 9", "Month 12"],
+          datasets: [
+            {
+              label: "Total Users",
+              data: [800, 1500, 2500, 4000, 5800],
+              fill: true,
+              backgroundColor: "rgba(30, 136, 229, 0.2)",
+              borderColor: "#1E88E5",
+              tension: 0.3,
+              pointBackgroundColor: "#1E88E5",
+              pointBorderColor: "#FFFFFF",
+              pointRadius: 5,
+            },
+            {
+              label: "Paid Subscribers",
+              data: [3, 500, 1500, 3000, 5000],
+              fill: true,
+              backgroundColor: "rgba(255, 193, 7, 0.2)",
+              borderColor: "#FFC107",
+              tension: 0.3,
+              pointBackgroundColor: "#FFC107",
+              pointBorderColor: "#FFFFFF",
+              pointRadius: 5,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: true,
+              position: "top",
+            },
+            title: {
+              display: true,
+              text: "Projected User Growth",
+            },
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: "Number of Users",
+              },
+            },
+          },
+        },
+      })
+
+      // Revenue Projection Chart
+      const revenueCtx = document
+        .getElementById("revenueProjectionChart")
+        .getContext("2d")
+      const revenueProjectionChart = new Chart(revenueCtx, {
+        type: "bar",
+        data: {
+          labels: ["Q1", "Q2", "Q3", "Q4"],
+          datasets: [
+            {
+              label: "Projected Revenue (in Lakhs ₹)",
+              data: [3, 8, 15, 25],
+              backgroundColor: [
+                "rgba(30, 136, 229, 0.6)",
+                "rgba(30, 136, 229, 0.7)",
+                "rgba(30, 136, 229, 0.8)",
+                "rgba(30, 136, 229, 0.9)",
+              ],
+              borderColor: ["#1565C0", "#1565C0", "#1565C0", "#1565C0"],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: true,
+              position: "top",
+            },
+            title: {
+              display: true,
+              text: "Quarterly Revenue Projection (Next 12 Months)",
+            },
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: "Revenue (in Lakhs ₹)",
+              },
+            },
+          },
+        },
+      })
+    </script>
+
+    <div class="slide-container">
+      <h1 class="title mb-8 text-center">Ask and the Valuation</h1>
+
+      <div class="flex">
+        <div class="w-1/2 pr-8">
+          <h2 class="text-2xl font-bold mb-6 text-gray-800">Ask</h2>
+
+          <div class="ask-card p-6 rounded-r-lg mb-8">
+            <div class="flex items-center mb-6">
+              <i
+                class="fas fa-hand-holding-usd text-3xl text-blue-500 mr-4"
+              ></i>
+              <div>
+                <h3 class="text-xl font-bold">Funding</h3>
+                <p class="content">
+                  <span class="highlight">₹25L</span> for marketing, team
+                  expansion, and AI scaling
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-center">
+              <i class="fas fa-handshake text-3xl text-blue-500 mr-4"></i>
+              <div>
+                <h3 class="text-xl font-bold">Partnerships</h3>
+                <p class="content">
+                  Strategic partnerships with EdTechs and institutions
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div style="height: 300px">
+            <canvas id="fundAllocationChart"></canvas>
+          </div>
+        </div>
+
+        <div class="w-1/2 pl-8">
+          <h2 class="text-2xl font-bold mb-6 text-gray-800">Valuation</h2>
+
+          <div class="valuation-card p-6 rounded-r-lg mb-8">
+            <div class="flex items-center">
+              <i class="fas fa-chart-line text-3xl text-amber-500 mr-4"></i>
+              <div>
+                <h3 class="text-xl font-bold">₹2.5 Cr</h3>
+                <p class="content">Pre-revenue, early traction, IP-rich</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <h3 class="text-xl font-bold mb-4">Valuation Basis</h3>
+            <ul class="content space-y-3">
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                Proprietary AI technology with specialized focus
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-2"></i> Early
+                market traction with 800+ users
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                Addressing large market with specific pain point
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-green-500 mr-2"></i> Scalable
+                SaaS business model
+              </li>
+            </ul>
+          </div>
+
+          <div class="contact-info p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4 text-center">Contact</h3>
+            <div class="flex justify-center space-x-8">
+              <div class="flex items-center">
+                <i class="fas fa-envelope text-2xl text-blue-500 mr-2"></i>
+                <p>therahulkumar.dev@gmail.com</p>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-phone text-2xl text-blue-500 mr-2"></i>
+                <p>+91 9523947981</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Fund Allocation Chart
+      const fundCtx = document
+        .getElementById("fundAllocationChart")
+        .getContext("2d")
+      const fundAllocationChart = new Chart(fundCtx, {
+        type: "pie",
+        data: {
+          labels: [
+            "Marketing & Sales",
+            "Team Expansion",
+            "AI Technology",
+            "Infrastructure",
+            "Operations",
+          ],
+          datasets: [
+            {
+              data: [35, 25, 20, 10, 10],
+              backgroundColor: [
+                "#1E88E5",
+                "#42A5F5",
+                "#64B5F6",
+                "#90CAF9",
+                "#BBDEFB",
+              ],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: "right",
+            },
+            title: {
+              display: true,
+              text: "Funding Allocation (%)",
+            },
+          },
+        },
+      })
+    </script>
+  </body>
+</html>
